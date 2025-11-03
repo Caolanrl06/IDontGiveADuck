@@ -13,8 +13,9 @@
     "medium": 0.50,
     "small": 0.30
   },
-  "specialMechanics": ["fast_movement", "overlapping_spawns"],
+  "specialMechanics": [ "fast_movement", "overlapping_spawns" ],
   "backgroundMusic": "boss_theme",
+  "backgroundImage": "background4",
   "difficulty": "expert",
   "designNotes": "Near-maximum difficulty with 3 backup spawns for expert-level recovery.",
   "targetSuccessRate": 0.30,

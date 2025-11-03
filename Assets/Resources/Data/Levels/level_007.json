@@ -15,6 +15,7 @@
   },
   "specialMechanics": [],
   "backgroundMusic": "challenge_theme",
+  "backgroundImage": "background3",
   "difficulty": "medium",
   "designNotes": "Significant difficulty spike with 3 backup spawns for adaptation testing.",
   "targetSuccessRate": 0.55,

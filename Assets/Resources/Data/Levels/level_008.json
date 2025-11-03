@@ -13,8 +13,9 @@
     "medium": 0.45,
     "small": 0.20
   },
-  "specialMechanics": ["slow_movement"],
+  "specialMechanics": [ "slow_movement" ],
   "backgroundMusic": "challenge_theme",
+  "backgroundImage": "background3",
   "difficulty": "medium",
   "designNotes": "Moving mechanics introduction with 3 backup spawns for learning curve.",
   "targetSuccessRate": 0.50,

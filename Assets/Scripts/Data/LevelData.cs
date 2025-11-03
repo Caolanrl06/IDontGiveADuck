@@ -27,6 +27,7 @@ public class LevelData
     public SizeDistribution sizeDistribution;
     public string[] specialMechanics;
     public string backgroundMusic;
+    public string backgroundImage;
     public string difficulty;
     public string designNotes;
     public float targetSuccessRate;

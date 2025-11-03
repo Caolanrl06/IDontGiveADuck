@@ -13,8 +13,9 @@
     "medium": 0.40,
     "small": 0.40
   },
-  "specialMechanics": ["fast_movement", "overlapping_spawns", "power_up_required"],
+  "specialMechanics": [ "fast_movement", "overlapping_spawns", "power_up_required" ],
   "backgroundMusic": "boss_theme",
+  "backgroundImage": "background4",
   "difficulty": "expert",
   "designNotes": "Epic finale with 3 backup spawns for perfect execution attempts.",
   "targetSuccessRate": 0.25,

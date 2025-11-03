@@ -15,6 +15,7 @@
   },
   "specialMechanics": [],
   "backgroundMusic": "tutorial_theme",
+  "backgroundImage": "background1",
   "difficulty": "easy",
   "designNotes": "First small ducks appear. 3 backup spawns maintain learning environment.",
   "targetSuccessRate": 0.85,

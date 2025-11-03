@@ -15,6 +15,7 @@
   },
   "specialMechanics": [],
   "backgroundMusic": "action_theme",
+  "backgroundImage": "background2",
   "difficulty": "easy",
   "designNotes": "Multi-parameter scaling with 3 backup spawns for skill transition.",
   "targetSuccessRate": 0.75,

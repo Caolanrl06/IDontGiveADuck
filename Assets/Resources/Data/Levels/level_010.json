@@ -13,8 +13,9 @@
     "medium": 0.50,
     "small": 0.25
   },
-  "specialMechanics": ["slow_movement", "overlapping_spawns"],
+  "specialMechanics": [ "slow_movement", "overlapping_spawns" ],
   "backgroundMusic": "boss_theme",
+  "backgroundImage": "background4",
   "difficulty": "hard",
   "designNotes": "Epic 40-second battle with 3 backup spawns for strategic recovery.",
   "targetSuccessRate": 0.35,

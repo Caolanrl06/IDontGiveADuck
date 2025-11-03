@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     
     [Header("Game Configuration")]
     [SerializeField] private int startingLives = 1;    // Number of lives player starts with
-    [SerializeField] private int currentLevelId = 1;   // Current level being played
+    static public int currentLevelId = 1;   // Current level being played
     
     [Header("Testing Tools")]
     [SerializeField] private int testLevelId = 12;     // Level to jump to for testing

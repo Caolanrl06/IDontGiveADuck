@@ -15,6 +15,7 @@
   },
   "specialMechanics": [],
   "backgroundMusic": "action_theme",
+  "backgroundImage": "background2",
   "difficulty": "medium",
   "designNotes": "First 30-second level with precision focus. 3 backup spawns for skill adjustment.",
   "targetSuccessRate": 0.65,

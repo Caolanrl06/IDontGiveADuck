@@ -13,8 +13,9 @@
     "medium": 0.40,
     "small": 0.10
   },
-  "specialMechanics": ["predictable_sequence"],
+  "specialMechanics": [ "predictable_sequence" ],
   "backgroundMusic": "action_theme",
+  "backgroundImage": "background2",
   "difficulty": "easy",
   "designNotes": "Predictable patterns help offset intensity. 3 backup spawns for pattern learning.",
   "targetSuccessRate": 0.70,

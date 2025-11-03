@@ -15,6 +15,7 @@
   },
   "specialMechanics": [],
   "backgroundMusic": "tutorial_theme",
+  "backgroundImage": "background1",
   "difficulty": "tutorial",
   "designNotes": "Quick tutorial - build confidence with large, slow targets",
   "targetSuccessRate": 0.95,

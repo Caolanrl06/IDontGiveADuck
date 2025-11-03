@@ -15,6 +15,7 @@
   },
   "specialMechanics": [],
   "backgroundMusic": "tutorial_theme",
+  "backgroundImage": "background1",
   "difficulty": "tutorial",
   "designNotes": "Introduce decoys with minimal penalty. 3 backup spawns for learning decoy mechanics.",
   "targetSuccessRate": 0.90,

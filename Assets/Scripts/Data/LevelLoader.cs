@@ -1,5 +1,7 @@
-using UnityEngine;
+using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// LevelLoader - Handles loading level data from JSON files
@@ -12,6 +14,7 @@ using System.Collections.Generic;
 /// </summary>
 public class LevelLoader : MonoBehaviour
 {
+    public event Action<LevelData> OnLevelLoaded;
     // Singleton pattern - static instance accessible from anywhere
     public static LevelLoader Instance { get; private set; }
     
@@ -20,6 +23,7 @@ public class LevelLoader : MonoBehaviour
     
     void Awake()
     {
+        
         // Singleton pattern implementation
         // If no instance exists, make this the singleton
         if (Instance == null)
@@ -33,7 +37,7 @@ public class LevelLoader : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
     /// <summary>
     /// Loads a level by its ID number
     /// 
@@ -131,6 +135,7 @@ public class LevelLoader : MonoBehaviour
             },
             specialMechanics = new string[0],  // No special mechanics
             backgroundMusic = "tutorial_theme",
+            backgroundImage = "background1",
             difficulty = "normal",
             designNotes = "Default level created due to missing level file",
             targetSuccessRate = 0.8f,          // 80% success rate target

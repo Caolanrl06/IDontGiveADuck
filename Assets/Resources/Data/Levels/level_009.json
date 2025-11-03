@@ -13,8 +13,9 @@
     "medium": 0.50,
     "small": 0.20
   },
-  "specialMechanics": ["slow_movement", "power_up_tutorial"],
+  "specialMechanics": [ "slow_movement", "power_up_tutorial" ],
   "backgroundMusic": "challenge_theme",
+  "backgroundImage": "background3",
   "difficulty": "hard",
   "designNotes": "Power-up introduction with 3 backup spawns for mechanic mastery.",
   "targetSuccessRate": 0.45,
