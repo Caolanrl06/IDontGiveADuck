@@ -8,7 +8,7 @@ public class DecoyDuck : BaseDuck
     [Header("Decoy Duck Settings")]
     [SerializeField] private ParticleSystem penaltyParticles;
     [SerializeField] private AudioClip penaltySound;
-    [SerializeField] private int timePenalty = 3; // seconds to subtract
+    [SerializeField] public int timePenalty = 3; // seconds to subtract
     [SerializeField] private GameObject penaltyTextPrefab; // Optional floating text
     
     [Header("Visual Distinction")]

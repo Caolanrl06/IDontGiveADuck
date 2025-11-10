@@ -8,7 +8,7 @@ public class GoodDuck : BaseDuck
     [Header("Good Duck Settings")]
     [SerializeField] private ParticleSystem successParticles;
     [SerializeField] private GameObject successTextPrefab; // Optional floating text
-    
+    [SerializeField] private GameObject scoreDisplay;
     [Header("Visual Feedback")]
     [SerializeField] private SpriteRenderer spriteRenderer;
    
@@ -33,6 +33,7 @@ public class GoodDuck : BaseDuck
         
         // Play success feedback
         PlaySuccessEffects();
+        DisplayModifyier();
         
         // Destroy duck
         DestroyDuck();
@@ -101,6 +102,11 @@ public class GoodDuck : BaseDuck
             GameObject scoreText = Instantiate(successTextPrefab, transform.position, Quaternion.identity);
             // Assume the prefab has a script to handle floating animation
         }
+    }
+
+    private void DisplayModifyier()
+    {
+        Instantiate(scoreDisplay);
     }
     
     #endregion
