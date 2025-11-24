@@ -1,114 +1,107 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.InputSystem;
 
 /// <summary>
-/// Good duck that players should click for points
-/// Save this as: Assets/Scripts/Gameplay/Ducks/GoodDuck.cs/// </summary>
+/// Good duck that players should click for points.
+/// Save this as: Assets/Scripts/Gameplay/Ducks/GoodDuck.cs
+/// </summary>
 public class GoodDuck : BaseDuck
 {
     [Header("Good Duck Settings")]
     [SerializeField] private ParticleSystem successParticles;
-    [SerializeField] private GameObject successTextPrefab; // Optional floating text
-    [SerializeField] private GameObject scoreDisplay;
+    [SerializeField] private GameObject successTextPrefab; // Optional floating text prefab
+    [SerializeField] private TextMeshPro scoreDisplayPrefab; 
+
     [Header("Visual Feedback")]
     [SerializeField] private SpriteRenderer spriteRenderer;
-   
-    
+
+    #region Unity Methods
+
     protected override void Start()
     {
         base.Start();
-        
     }
-    
+
+    #endregion
+
     #region Abstract Implementation
-    
+
     protected override void OnClicked()
     {
         Debug.Log($"Good duck clicked! Awarded {pointValue} points");
-        
+
         // Notify game manager
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.OnGoodDuckClicked(this);
-        }
-        
-        // Play success feedback
+        GameManager.Instance?.OnGoodDuckClicked(this);
+
+        // Play particle/sound/score text effects
         PlaySuccessEffects();
-        DisplayModifyier();
-        
+        DisplayModifier();
+
         // Destroy duck
         DestroyDuck();
     }
-    
+
     protected override void OnLifetimeExpired()
     {
         Debug.Log("Good duck expired - player missed it!");
-        
-        // Notify game manager about missed duck
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.OnGoodDuckMissed(this);
-        }
-        
-        // No special effects for missed ducks
+
+        GameManager.Instance?.OnGoodDuckMissed(this);
     }
-    
+
     #endregion
-    
+
     #region Virtual Overrides
-    
+
     protected override void OnDuckSpawned()
     {
         base.OnDuckSpawned();
-        
-        // Good duck specific spawn behaviour
-        // Could add spawn animation, sound, etc.
-        
-        // Ensure proper tag for identification
         gameObject.tag = "GoodDuck";
     }
-    
+
     protected override void OnLifetimeLow()
     {
         base.OnLifetimeLow();
-        // Could add sprite swap or animation here if needed
+        // Optional: add sprite swap or animation here
     }
-    
+
     #endregion
-    
+
     #region Good Duck Specific Methods
-    
+
     /// <summary>
-    /// Play success effects when clicked
+    /// Plays particle, sound, and floating text effects when clicked
     /// </summary>
     private void PlaySuccessEffects()
     {
         // Particle effect
         if (successParticles != null)
         {
-            ParticleSystem effect = Instantiate(successParticles, transform.position, transform.rotation);
+            ParticleSystem effect = Instantiate(successParticles, transform.position, Quaternion.identity);
             effect.Play();
             Destroy(effect.gameObject, effect.main.duration);
         }
-        
-        // Sound effect - use AudioManager for consistency
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.PlayDuckClickGood(transform.position);
-        }
-        
-        // Floating score text (optional)
+
+        // Sound effect
+        AudioManager.Instance?.PlayDuckClickGood(transform.position);
+
+        // Floating score prefab (optional)
         if (successTextPrefab != null)
         {
-            GameObject scoreText = Instantiate(successTextPrefab, transform.position, Quaternion.identity);
-            // Assume the prefab has a script to handle floating animation
+            Instantiate(successTextPrefab, transform.position, Quaternion.identity);
         }
     }
 
-    private void DisplayModifyier()
+    /// <summary>
+    /// Displays the floating +points text at the mouse click position on the canvas
+    /// </summary>
+    private void DisplayModifier()
     {
-        Instantiate(scoreDisplay);
+        Vector3 spawnPosition = transform.position;
+        spawnPosition.z = -5.5f;
+        scoreDisplayPrefab.text = $"+ {pointValue}";
+        Instantiate(scoreDisplayPrefab, spawnPosition, transform.rotation);
     }
-    
-    #endregion
 
+    #endregion
 }
