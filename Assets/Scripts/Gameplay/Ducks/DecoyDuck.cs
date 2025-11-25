@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// Decoy duck that penalises players when clicked
@@ -14,6 +15,7 @@ public class DecoyDuck : BaseDuck
     [Header("Visual Distinction")]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool subtleVisualDifference = true; // Make it harder to distinguish
+    [SerializeField] private TextMeshPro scoreDisplayPrefab;
     
     #region Initialization Override
     
@@ -41,7 +43,7 @@ public class DecoyDuck : BaseDuck
         
         // Play penalty feedback
         PlayPenaltyEffects();
-        
+        DisplayModifier();
         // Destroy duck
         DestroyDuck();
     }
@@ -151,6 +153,13 @@ public class DecoyDuck : BaseDuck
         // Slight rotation variation
         transform.rotation *= Quaternion.Euler(0, 0, Random.Range(-2f, 2f));
     }
-    
+    private void DisplayModifier()
+    {
+        Vector3 spawnPosition = transform.position;
+        spawnPosition.z = -5.5f;
+        scoreDisplayPrefab.text = $"- {timePenalty}s";
+        Instantiate(scoreDisplayPrefab, spawnPosition, transform.rotation);
+    }
+
     #endregion
 }

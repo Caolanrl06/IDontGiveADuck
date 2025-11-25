@@ -6,7 +6,11 @@ public class ScoreDisplay : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 2);
+        Destroy(gameObject);
     }
-  
+    private void Update()
+    {
+        
+    }
+
 }
