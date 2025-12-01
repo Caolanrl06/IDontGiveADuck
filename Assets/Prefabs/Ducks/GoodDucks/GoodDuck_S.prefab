@@ -152,7 +152,7 @@ MonoBehaviour:
   moveSpeed: 0
   destroyEffect: {fileID: 0}
   clickSound: {fileID: 0}
-  successParticles: {fileID: 0}
+  successParticles: {fileID: 2460117035311537836, guid: d6939daf8923ec244af8cd1c365d5694, type: 3}
   successTextPrefab: {fileID: 0}
   scoreDisplayPrefab: {fileID: 434908820190836371, guid: e35433c9beb3a7e4da4a768a7106381f, type: 3}
   spriteRenderer: {fileID: 1339619373891858794}

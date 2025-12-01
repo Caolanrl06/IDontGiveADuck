@@ -11,14 +11,20 @@ public class DecoyDuck : BaseDuck
     [SerializeField] private AudioClip penaltySound;
     [SerializeField] public int timePenalty = 3; // seconds to subtract
     [SerializeField] private GameObject penaltyTextPrefab; // Optional floating text
-    
+
     [Header("Visual Distinction")]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool subtleVisualDifference = true; // Make it harder to distinguish
     [SerializeField] private TextMeshPro scoreDisplayPrefab;
-    
+    [SerializeField] private CameraShake startShake;
+
+    void Awake()
+    {
+        startShake = Camera.main.GetComponent<CameraShake>();
+    }
+
     #region Initialization Override
-    
+
     /// <summary>
     /// Initialise decoy duck with custom properties
     /// </summary>
@@ -45,6 +51,7 @@ public class DecoyDuck : BaseDuck
         PlayPenaltyEffects();
         DisplayModifier();
         // Destroy duck
+        startShake.start = true;
         DestroyDuck();
     }
     
@@ -122,7 +129,9 @@ public class DecoyDuck : BaseDuck
         // Particle effect (different from good duck)
         if (penaltyParticles != null)
         {
-            ParticleSystem effect = Instantiate(penaltyParticles, transform.position, transform.rotation);
+            Vector3 particleSpawnPos = transform.position;
+            particleSpawnPos.z = -5.5f;
+            ParticleSystem effect = Instantiate(penaltyParticles, particleSpawnPos, Quaternion.identity);
             effect.Play();
             Destroy(effect.gameObject, effect.main.duration);
         }

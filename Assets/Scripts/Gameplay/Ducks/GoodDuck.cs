@@ -77,7 +77,9 @@ public class GoodDuck : BaseDuck
         // Particle effect
         if (successParticles != null)
         {
-            ParticleSystem effect = Instantiate(successParticles, transform.position, Quaternion.identity);
+            Vector3 particleSpawnPos = transform.position;
+            particleSpawnPos.z = -5.5f;
+            ParticleSystem effect = Instantiate(successParticles, particleSpawnPos, Quaternion.identity);
             effect.Play();
             Destroy(effect.gameObject, effect.main.duration);
         }
@@ -98,7 +100,7 @@ public class GoodDuck : BaseDuck
     private void DisplayModifier()
     {
         Vector3 spawnPosition = transform.position;
-        spawnPosition.z = -5.5f;
+        spawnPosition.z = -6.5f;
         scoreDisplayPrefab.text = $"+ {pointValue}";
         Instantiate(scoreDisplayPrefab, spawnPosition, transform.rotation);
         Debug.Log("Displayed score modifier");

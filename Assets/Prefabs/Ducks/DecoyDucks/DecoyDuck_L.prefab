@@ -152,10 +152,11 @@ MonoBehaviour:
   moveSpeed: 0
   destroyEffect: {fileID: 0}
   clickSound: {fileID: 0}
-  penaltyParticles: {fileID: 0}
+  penaltyParticles: {fileID: 5014843060108207616, guid: 7eaa361735bafba428127761cb0f1a56, type: 3}
   penaltySound: {fileID: 0}
   timePenalty: 2
   penaltyTextPrefab: {fileID: 0}
   spriteRenderer: {fileID: 251516885786172104}
   subtleVisualDifference: 1
   scoreDisplayPrefab: {fileID: 434908820190836371, guid: e35433c9beb3a7e4da4a768a7106381f, type: 3}
+  startShake: {fileID: 8778551040022456178, guid: 05ca1fa9a4ce45e4481089465baa3dd5, type: 3}
