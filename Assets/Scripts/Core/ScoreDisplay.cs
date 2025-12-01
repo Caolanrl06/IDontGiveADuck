@@ -6,9 +6,10 @@ public class ScoreDisplay : MonoBehaviour
 {
     private bool isMoved = false;
     private int moves = 0;
+    private Vector3 moveDirection = new Vector3(0, 0.2f, 0);
     private void Update()
     {
-        if(moves == 2)
+        if(moves == 5)
         {
             Destroy(gameObject);
         }
@@ -20,8 +21,8 @@ public class ScoreDisplay : MonoBehaviour
     }
     private IEnumerator MoveScoreDisplay()
     {
-        yield return new WaitForSeconds(1);
-        transform.position += Vector3.up;
+        yield return new WaitForSeconds(0.2f);
+        transform.position += moveDirection;
         moves++;
         isMoved = false;
     }

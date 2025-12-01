@@ -728,10 +728,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9d1b15e4ae8a74dabe7a631b8bddd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGround1: {fileID: 4340327197093892169, guid: 4583f0e44e9b0834bab712e748ed0b51, type: 3}
-  backGround2: {fileID: 4212745256189018445, guid: d3dc0ff2942e857468543a8b13eb886b, type: 3}
-  backGround3: {fileID: 6316843149013043485, guid: 724488742ac65d54b883019d4e795a11, type: 3}
-  backGround4: {fileID: 1656571581916853771, guid: e988ae7104c6d684f85b4d9c1bb21650, type: 3}
+  backGround1: {fileID: -1291202924252101130, guid: 026e692f13151f742a957ea57e3f755b, type: 3}
+  backGround2: {fileID: 7282461348544508605, guid: 1d5c6915cbce2f64f83e7c905779fc03, type: 3}
+  backGround3: {fileID: 8344324037188607793, guid: eb40e0b1e6f59b144bc76294ab6e1e42, type: 3}
+  backGround4: {fileID: -7912298583207001778, guid: 1fd25df1c0483a74bb8ae1fbbf5c8859, type: 3}
   normalBackground: {fileID: 2130786555258662086, guid: 85c0ddae0b1891b479156a3dbb9d4806, type: 3}
   spriteRenderer: {fileID: 1253182321}
 --- !u!1 &1539604448
@@ -765,15 +765,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 0}
   sfxSource: {fileID: 0}
-  menuMusic: {fileID: 8300000, guid: 9362a74eed4b9a94db2dfc18cdb2c4c0, type: 3}
+  menuMusic: {fileID: 8300000, guid: 0ad591428b0c18c4da51fe3bf98dbc63, type: 3}
   gameOverMusic: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
   victoryMusic: {fileID: 8300000, guid: 0ad591428b0c18c4da51fe3bf98dbc63, type: 3}
   tutorialTheme: {fileID: 8300000, guid: 06906d718be5b6a4cb2df8732bf39832, type: 3}
   actionTheme: {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
   challengeTheme: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
   bossTheme: {fileID: 8300000, guid: fc5af015011ea3745b7f78ea1dd1049f, type: 3}
-  levelStartSound: {fileID: 0}
-  levelCompleteSound: {fileID: 0}
+  levelStartSound: {fileID: 8300000, guid: d2ef94fd9745a4d76b86a074f11cd1f5, type: 3}
+  levelCompleteSound: {fileID: 8300000, guid: 379bb66060fb94cbeaac20e1421ce065, type: 3}
   gameOverSound: {fileID: 8300000, guid: 9bd500496aefc47b08473f8111803307, type: 3}
   duckClickDecoySound: {fileID: 8300000, guid: 93fc9e2ebd7b8485dac10e43aa444b8d, type: 3}
   duckClickGoodSound: {fileID: 8300000, guid: 0b5de865586844050b285d4a3fd6b033, type: 3}
@@ -1078,6 +1078,10 @@ PrefabInstance:
     - target: {fileID: 2180686144575693520, guid: 23f7d1b27945c7d4f934b3d6909749bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153151903205117066, guid: 23f7d1b27945c7d4f934b3d6909749bd, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
