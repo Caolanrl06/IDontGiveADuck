@@ -101,6 +101,7 @@ public class GoodDuck : BaseDuck
         spawnPosition.z = -5.5f;
         scoreDisplayPrefab.text = $"+ {pointValue}";
         Instantiate(scoreDisplayPrefab, spawnPosition, transform.rotation);
+        Debug.Log("Displayed score modifier");
     }
 
     #endregion

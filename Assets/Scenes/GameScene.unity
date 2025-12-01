@@ -709,17 +709,17 @@ MonoBehaviour:
   musicSource: {fileID: 0}
   sfxSource: {fileID: 0}
   menuMusic: {fileID: 8300000, guid: 9362a74eed4b9a94db2dfc18cdb2c4c0, type: 3}
-  gameOverMusic: {fileID: 0}
-  victoryMusic: {fileID: 0}
-  tutorialTheme: {fileID: 8300000, guid: 17ba4253fc7fd4ea7804dece25fb8f32, type: 3}
-  actionTheme: {fileID: 8300000, guid: b77acbb374058480dbeae07444542e03, type: 3}
-  challengeTheme: {fileID: 8300000, guid: ae40a015c678644b0ac6139e22717c04, type: 3}
-  bossTheme: {fileID: 8300000, guid: ab372a7a374be074cb54cb03af2b1625, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
+  victoryMusic: {fileID: 8300000, guid: 0ad591428b0c18c4da51fe3bf98dbc63, type: 3}
+  tutorialTheme: {fileID: 8300000, guid: 06906d718be5b6a4cb2df8732bf39832, type: 3}
+  actionTheme: {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
+  challengeTheme: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
+  bossTheme: {fileID: 8300000, guid: fc5af015011ea3745b7f78ea1dd1049f, type: 3}
   levelStartSound: {fileID: 0}
   levelCompleteSound: {fileID: 0}
-  gameOverSound: {fileID: 0}
-  duckClickDecoySound: {fileID: 8300000, guid: e1acdd1bc4d1e8f4a871efbe1ea6e9ab, type: 3}
-  duckClickGoodSound: {fileID: 8300000, guid: 92648bc8bb61f2142ad3ae9708c86a30, type: 3}
+  gameOverSound: {fileID: 8300000, guid: 9bd500496aefc47b08473f8111803307, type: 3}
+  duckClickDecoySound: {fileID: 8300000, guid: 93fc9e2ebd7b8485dac10e43aa444b8d, type: 3}
+  duckClickGoodSound: {fileID: 8300000, guid: 0b5de865586844050b285d4a3fd6b033, type: 3}
   masterVolume: 1
   musicVolume: 0.5
   sfxVolume: 1

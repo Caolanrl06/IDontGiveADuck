@@ -6,7 +6,7 @@ public class ScoreDisplay : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 2);
     }
     private void Update()
     {
